@@ -40,6 +40,12 @@ module.exports = {
         "no-use-before-define": "off",
         "react/jsx-props-no-spreading": "off",
         "react/no-array-index-key": "warn",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                devDependencies: ["vite.config.ts"],
+            },
+        ],
     },
     settings: {
         "import/resolver": {

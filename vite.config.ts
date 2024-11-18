@@ -1,11 +1,11 @@
 import { defineConfig } from "vite";
-import reactRefresh from "@vitejs/plugin-react-refresh";
+import reactRefresh from "@vitejs/plugin-react";
 import macrosPlugin from "vite-plugin-babel-macros";
 
 import path from "path";
 // https://vitejs.dev/config/
-export default () => {
-    return defineConfig({
+export default () =>
+    defineConfig({
         root: "./src",
         base: "./",
         plugins: [reactRefresh(), macrosPlugin()],
@@ -30,4 +30,3 @@ export default () => {
             },
         },
     });
-};
