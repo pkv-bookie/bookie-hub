@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { Header, Icon } from "zmp-ui";
 import styled from "styled-components";
 import tw from "twin.macro";
-import Background from "@assets/header-background.png";
 
 export interface DefaultHeaderProps {
     title?: string;
@@ -12,16 +11,12 @@ export interface DefaultHeaderProps {
 const HeaderContainer = styled(Header)`
     ${tw`flex flex-row items-center bg-main fixed top-0 left-0 w-full text-white px-4 h-[calc(48px + var(--zaui-safe-area-inset-top, 0px))]`};
     z-index: 1;
-    background: linear-gradient(
-            0deg,
-            rgba(4, 109, 214, 0.9),
-            rgba(4, 109, 214, 0.9)
-        ),
-        url(${Background});
+    background: white;
+    color: black;
     background-size: cover;
     background-position: center;
     .zaui-btn-icon {
-        ${tw`text-white`}
+        ${tw`text-black`}
     }
     .zaui-header-back-btn:active {
         background-color: transparent;
@@ -32,6 +27,7 @@ const HeaderContainer = styled(Header)`
     .zaui-header-title {
         padding-right: 98px;
     }
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const DefaultHeader: FC<DefaultHeaderProps> = props => {
@@ -40,7 +36,7 @@ const DefaultHeader: FC<DefaultHeaderProps> = props => {
     return (
         <HeaderContainer
             title={title}
-            backIcon={<Icon icon="zi-arrow-left" />}
+            backIcon={<Icon icon="zi-chevron-left-header" />}
             showBackIcon={back}
         />
     );
