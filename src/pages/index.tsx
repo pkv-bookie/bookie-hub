@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { AnimationRoutes, ZMPRouter } from "zmp-ui";
+import { AnimationRoutes, Box, ZMPRouter } from "zmp-ui";
 
 import {
     FeedbackPage,
@@ -17,28 +17,33 @@ import { ProfilePage } from "./Profile";
 
 const Routes: React.FC = () => (
     <ZMPRouter>
-        <AnimationRoutes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/guidelines" element={<GuidelinesPage />} />
+        <Box className="flex-1 flex flex-col overflow-hidden">
+            <AnimationRoutes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/guidelines" element={<GuidelinesPage />} />
 
-            <Route path="/feedbacks" element={<FeedbackPage />} />
-            <Route path="/feedbacks/:id" element={<FeedbackDetailPage />} />
-            <Route path="/create-feedback" element={<CreateFeedbackPage />} />
-            <Route
-                path="/create-schedule-appointment"
-                element={<CreateScheduleAppointmentPage />}
-            />
-            <Route
-                path="/schedule-appointment-result"
-                element={<AppointmentScheduleResultPage />}
-            />
-            <Route
-                path="/information-guide"
-                element={<InformationGuidePage />}
-            />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-        </AnimationRoutes>
+                <Route path="/feedbacks" element={<FeedbackPage />} />
+                <Route path="/feedbacks/:id" element={<FeedbackDetailPage />} />
+                <Route
+                    path="/create-feedback"
+                    element={<CreateFeedbackPage />}
+                />
+                <Route
+                    path="/create-schedule-appointment"
+                    element={<CreateScheduleAppointmentPage />}
+                />
+                <Route
+                    path="/schedule-appointment-result"
+                    element={<AppointmentScheduleResultPage />}
+                />
+                <Route
+                    path="/information-guide"
+                    element={<InformationGuidePage />}
+                />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/profile" element={<ProfilePage />} />
+            </AnimationRoutes>
+        </Box>
     </ZMPRouter>
 );
 

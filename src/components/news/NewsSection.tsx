@@ -10,7 +10,7 @@ import NewsList from "./NewsList";
 export interface NewsProps {}
 
 const Wrapper = styled(Box)`
-    ${tw`bg-ui_bg mb-5`};
+    ${tw`bg-ui_bg mb-2`};
 `;
 
 const NewsSection: FC<NewsProps> = () => {

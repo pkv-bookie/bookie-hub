@@ -14,10 +14,10 @@ import Procedures from "./Procedures";
 
 const HomePage: React.FunctionComponent = () => {
     const getUser = useStore(state => state.getUserInfo);
-    const [organization] = useStore(state => [
-        state.organization,
-        state.getOrganization,
-    ]);
+    // const [organization] = useStore(state => [
+    //     state.organization,
+    //     state.getOrganization,
+    // ]);
     const user = useStore(state => state.user);
 
     useEffect(() => {
@@ -30,12 +30,8 @@ const HomePage: React.FunctionComponent = () => {
     return (
         <PageLayout
             id="home-page"
-            customHeader={
-                <HomeHeader
-                    title="DỊCH VỤ CÔNG"
-                    name={organization?.name || ""}
-                />
-            }
+            customHeader={<HomeHeader title="DỊCH VỤ CÔNG" />}
+            showNavigationBar
         >
             <UserInfo />
             <Utinities utinities={APP_UTINITIES} />
