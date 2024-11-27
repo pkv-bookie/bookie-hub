@@ -6,7 +6,7 @@ import tw from "twin.macro";
 import { scanQRCode } from "zmp-sdk";
 
 const Container = styled.div`
-    ${tw`flex flex-col items-center justify-center min-h-screen bg-white w-full`};
+    ${tw`flex flex-col items-center min-h-screen bg-white w-full pt-14`};
 `;
 
 const Title = styled.h2`
@@ -38,7 +38,7 @@ const ContinueButton = styled.button`
 const HomeLogin: FC = () => {
     const navigate = useNavigate();
     const handleOnClickContinue = () => {
-        navigate("/");
+        navigate("/sign-in");
     };
     const handleOnclickScanQR = () => {
         scanQRCode({

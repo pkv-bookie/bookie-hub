@@ -1,13 +1,15 @@
-import { HomeHeader } from "@components";
+import { BookieHubHeader } from "@components";
+import PageLayout from "@components/layout/PageLayout";
 import { HomeLogin } from "@components/login";
 import React from "react";
-import { Box } from "zmp-ui";
 
 const HomeLoginPage: React.FunctionComponent = () => (
-    <Box>
-        <HomeHeader title="Bookie" />
+    <PageLayout
+        id="home-login-page"
+        customHeader={<BookieHubHeader title="Đăng nhập" />}
+    >
         <HomeLogin />
-    </Box>
+    </PageLayout>
 );
 
 export default HomeLoginPage;

@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import {
-    HomeHeader,
     UserInfo,
     Utinities,
     ListOA,
     NewsSection,
+    BookieHubHeader,
 } from "@components";
 import PageLayout from "@components/layout/PageLayout";
 import { APP_UTINITIES } from "@constants/utinities";
@@ -30,7 +30,7 @@ const HomePage: React.FunctionComponent = () => {
     return (
         <PageLayout
             id="home-page"
-            customHeader={<HomeHeader title="DỊCH VỤ CÔNG" />}
+            customHeader={<BookieHubHeader title="Bookie" />}
             showNavigationBar
         >
             <UserInfo />

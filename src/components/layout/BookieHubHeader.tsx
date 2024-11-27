@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import Logo from "@assets/logo.png";
 
-export interface HomeHeaderProps {
+export interface BookieHubHeaderProps {
     title: string;
 }
 
@@ -25,7 +25,7 @@ const LogoWrapper = styled.div`
     margin-right: 8px;
 `;
 
-const HomeHeader: FC<HomeHeaderProps> = props => {
+const BookieHubHeader: FC<BookieHubHeaderProps> = props => {
     const { title } = props;
     return (
         <HeaderContainer>
@@ -36,4 +36,4 @@ const HomeHeader: FC<HomeHeaderProps> = props => {
     );
 };
 
-export default HomeHeader;
+export default BookieHubHeader;
