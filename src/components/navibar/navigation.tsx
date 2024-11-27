@@ -2,7 +2,7 @@ import { MenuItem } from "@interfaces/menu.interface";
 import React, { FC, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 // import { useVirtualKeyboardVisible } from "src/hooks";
-import { BottomNavigation, Icon } from "zmp-ui";
+import { BottomNavigation, Icon, useNavigate } from "zmp-ui";
 
 const tabs: Record<string, MenuItem> = {
     "/": {
@@ -22,7 +22,7 @@ const tabs: Record<string, MenuItem> = {
         label: "Thông báo",
         icon: <Icon icon="zi-notif" />,
     },
-    "/profile": {
+    "/home-login": {
         label: "Cài đặt",
         icon: <Icon icon="zi-tune" />,
     },
@@ -35,7 +35,7 @@ export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/category"];
 export const Navigation: FC = () => {
     const [activeTab, setActiveTab] = useState<TabKeys>("/");
     // // const keyboardVisible = useVirtualKeyboardVisible();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const location = useLocation();
 
     useEffect(() => {
@@ -69,7 +69,7 @@ export const Navigation: FC = () => {
                     label={tabs[path].label}
                     icon={tabs[path].icon}
                     activeIcon={tabs[path].activeIcon}
-                    // onClick={() => navigate(path)}
+                    onClick={() => navigate(path)}
                 />
             ))}
         </BottomNavigation>

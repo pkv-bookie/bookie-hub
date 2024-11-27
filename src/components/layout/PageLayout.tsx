@@ -35,6 +35,7 @@ const Footer = styled.footer`
     position: fixed;
     bottom: 0;
     z-index: 10;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.05);
 `;
 
 const PageLayout = React.forwardRef<HTMLDivElement, PropsType>((props, ref) => {
