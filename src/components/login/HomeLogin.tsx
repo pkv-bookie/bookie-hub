@@ -1,3 +1,4 @@
+import { FormControl, InputLabel, OutlinedInput } from "@mui/material";
 import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -12,12 +13,8 @@ const Title = styled.h2`
     ${tw`text-xl font-semibold text-gray-800 mb-8`};
 `;
 
-const InputField = styled.input`
-    ${tw`w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500`};
-`;
-
 const Divider = styled.div`
-    ${tw`flex items-center w-full max-w-sm my-6`};
+    ${tw`flex items-center w-full max-w-sm my-6 px-6`};
     hr {
         ${tw`flex-grow border-gray-300`};
     }
@@ -56,13 +53,19 @@ const HomeLogin: FC = () => {
 
     return (
         <Container>
-            {/* Title */}
             <Title>ĐĂNG NHẬP</Title>
 
-            {/* Input Field */}
-            <div className="w-full">
-                <InputField placeholder="Nhập mã CSYT" />
-            </div>
+            <FormControl sx={{ mb: 1, width: "80vw" }} variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-password">
+                    Mã CSYT
+                </InputLabel>
+                <OutlinedInput
+                    id="outlined-adornment-csyt"
+                    type="text"
+                    placeholder="Nhập mã CSYT"
+                    label="Mã CSYT"
+                />
+            </FormControl>
 
             {/* Divider */}
             <Divider>
@@ -94,7 +97,6 @@ const HomeLogin: FC = () => {
             </QRButton>
             <QRText onClick={handleOnclickScanQR}>Quét mã QR</QRText>
 
-            {/* Continue Button */}
             <div className="w-full max-w-sm">
                 <ContinueButton onClick={handleOnClickContinue}>
                     Tiếp tục
