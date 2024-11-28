@@ -11,34 +11,29 @@ import Renew from "@assets/files.png";
 
 export const APP_UTINITIES: Array<Utinity> = [
     {
-        key: "create-schedule-appointment",
-        label: "Đặt lịch làm việc",
-        icon: Icon.CalendarIcon,
-        path: "/create-schedule-appointment",
+        key: "call-client",
+        label: "Gọi số",
+        icon: Icon.BookieHubSpeakerIcon,
+        path: "/call-client",
     },
     {
-        key: "info",
-        label: "Thông tin - hướng dẫn",
-        icon: Icon.BookIcon,
-        path: "/information-guide",
+        key: "client",
+        label: "Khách hàng",
+        icon: Icon.BookieHubProfileIcon,
+        path: "/client",
     },
     {
-        key: "feedback",
-        label: "Góp ý - phản ánh",
-        icon: Icon.PenIcon,
-        path: "/feedbacks",
+        key: "appointment",
+        label: "Lịch hẹn",
+        icon: Icon.BookieHubCalendarIcon,
+        path: "/appointment",
     },
     {
-        key: "goverment",
-        label: "Cổng dịch vụ công quốc gia",
-        icon: Icon.GlobeIcon,
-        link: "https://dichvucong.gov.vn/",
-    },
-    {
-        key: "file-search",
-        label: "Tra cứu hồ sơ",
-        icon: Icon.SearchIcon,
-        path: "/search",
+        key: "cskh",
+        label: "CSKH",
+        icon: Icon.BookieHubHeadsetIcon,
+        path: "/cskh",
+        inDevelopment: true,
     },
 ];
 

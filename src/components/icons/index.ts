@@ -13,3 +13,7 @@ export { default as SearchIcon } from "./Search";
 export { default as ImageIcon } from "./ImageIcon";
 export { default as NotificationIcon } from "./Notification";
 export { default as SuccessIcon } from "./SuccessIcon";
+export { default as BookieHubSpeakerIcon } from "./BookieHubSpeaker";
+export { default as BookieHubCalendarIcon } from "./BookieHubCalendar";
+export { default as BookieHubHeadsetIcon } from "./BookieHubHeadset";
+export { default as BookieHubProfileIcon } from "./BookieHubProfile";

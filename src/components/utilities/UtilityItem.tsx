@@ -28,28 +28,26 @@ export interface UtinityItemProps {
 }
 
 const Wrapper = styled.div`
-    ${tw`flex flex-col items-center p-1 mb-2`};
+    ${tw`flex flex-col items-center p-1 mb-2 content-center justify-center`};
     width: calc(calc(50%) - 12px);
     &:not(:nth-child(2n)) {
         margin-right: 12px;
     }
 `;
+
 const IconWrapper = styled.div`
-    ${tw`rounded-2xl bg-icon_bg relative`};
+    ${tw`rounded-2xl bg-icon_bg relative flex flex-col items-center justify-center`};
     width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 95px;
+    height: 105px;
 `;
 
 const CenterIcon = styled.div`
-    ${tw`inline-block `};
+    ${tw`block`};
 `;
 
 const Label = styled(Text)`
-    ${tw`text-center`};
-    margin-top: 8px;
+    ${tw`text-center block`};
+    margin-top: 10px;
 `;
 
 const UtinityItem: FunctionComponent<UtinityItemProps> = props => {
@@ -66,12 +64,14 @@ const UtinityItem: FunctionComponent<UtinityItemProps> = props => {
         <Wrapper onClick={handleClick}>
             {Icon && (
                 <IconWrapper>
-                    <CenterIcon>
-                        <Icon />
-                    </CenterIcon>
+                    <>
+                        <CenterIcon>
+                            <Icon />
+                        </CenterIcon>
+                        <Label size="xxSmall">{label}</Label>
+                    </>
                 </IconWrapper>
             )}
-            <Label size="xxSmall">{label}</Label>
         </Wrapper>
     );
 };

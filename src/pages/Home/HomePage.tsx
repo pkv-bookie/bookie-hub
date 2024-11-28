@@ -5,6 +5,7 @@ import {
     ListOA,
     NewsSection,
     BookieHubHeader,
+    SumaryReport,
 } from "@components";
 import PageLayout from "@components/layout/PageLayout";
 import { APP_UTINITIES } from "@constants/utinities";
@@ -35,6 +36,7 @@ const HomePage: React.FunctionComponent = () => {
         >
             <UserInfo />
             <Utinities utinities={APP_UTINITIES} />
+            <SumaryReport />
             <ListOA />
             <Contacts />
             <Procedures />
