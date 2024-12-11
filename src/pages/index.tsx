@@ -16,6 +16,7 @@ import { SearchPage } from "./Search";
 import { ProfilePage } from "./Profile";
 import HomeLoginPage from "./Login/HomeLoginPage";
 import SignInPage from "./Login/SignInPage";
+import { CallClientPage } from "./CallClient";
 
 const Routes: React.FC = () => (
     <ZMPRouter>
@@ -23,6 +24,8 @@ const Routes: React.FC = () => (
             <AnimationRoutes>
                 <Route path="/home-login" element={<HomeLoginPage />} />
                 <Route path="/sign-in" element={<SignInPage />} />
+
+                <Route path="/call-client" element={<CallClientPage />} />
 
                 <Route path="/" element={<HomePage />} />
                 <Route path="/guidelines" element={<GuidelinesPage />} />

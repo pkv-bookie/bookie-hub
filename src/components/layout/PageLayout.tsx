@@ -63,7 +63,7 @@ const PageLayout = React.forwardRef<HTMLDivElement, PropsType>((props, ref) => {
         >
             {customHeader || <DefaultHeader title={title} back />}
             <div
-                className="flex-1 overflow-auto"
+                className="flex-1 overflow-auto bg-white"
                 style={{ paddingBottom: showNavigationBar ? 50 : 0 }}
             >
                 {children}

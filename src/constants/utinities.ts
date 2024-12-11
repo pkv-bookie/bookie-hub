@@ -21,12 +21,14 @@ export const APP_UTINITIES: Array<Utinity> = [
         label: "Khách hàng",
         icon: Icon.BookieHubProfileIcon,
         path: "/client",
+        inDevelopment: true,
     },
     {
         key: "appointment",
         label: "Lịch hẹn",
         icon: Icon.BookieHubCalendarIcon,
         path: "/appointment",
+        inDevelopment: true,
     },
     {
         key: "cskh",

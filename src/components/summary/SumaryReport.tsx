@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 const Divider = styled.div`
-    ${tw`flex items-center w-full max-w-sm my-3 px-1`};
+    ${tw`flex items-center w-full my-3 px-1`};
     hr {
         ${tw`flex-grow border-gray-300`};
     }
@@ -13,7 +13,7 @@ const Divider = styled.div`
 `;
 
 const CardWrapper = styled.div`
-    ${tw`bg-white p-4 max-w-sm w-full mt-2 p-4`};
+    ${tw`bg-white p-4 w-full mt-2 p-4`};
 `;
 
 const Header = styled.div`

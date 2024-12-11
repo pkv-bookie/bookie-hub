@@ -39,6 +39,7 @@ const IconWrapper = styled.div`
     ${tw`rounded-2xl bg-icon_bg relative flex flex-col items-center justify-center`};
     width: 100%;
     height: 105px;
+    background-color: #f3faff;
 `;
 
 const CenterIcon = styled.div`

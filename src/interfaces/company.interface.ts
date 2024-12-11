@@ -1,0 +1,31 @@
+export interface ICompany {
+    Id: string;
+    Active: boolean;
+    Domain: string;
+    Name: string;
+    Address: string;
+    Mobile: string;
+    Email: string;
+    LoaiHinhKinhDoanh: string;
+    LogoUrl: string;
+    Website: string;
+    Activated: boolean;
+    UseBookie: boolean;
+    UseCRM: boolean;
+    UseCommonPatientPortal: boolean;
+    TemplateUrl: string;
+    IsWidget: boolean;
+    JsonData: string;
+    EnableBookStartTime: number;
+    EnableBookEndTime: number;
+    BookingDate: number;
+    IsBooking: boolean;
+    ShortDescription: string;
+    CoverImage: string;
+    ShareLink: string;
+    BookieLink: string;
+    CurrentSubscriptionTypeId: string;
+    ZaloOAId?: string;
+    ZaloOAName?: string;
+    ZaloAppId?: string;
+}
